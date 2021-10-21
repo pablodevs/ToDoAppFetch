@@ -1,13 +1,83 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
 
-/* 
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #468492;
+}
+body, input.form-control {
+    font-family: "Dekko";
+    font-size: 28px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+// Buttons styles
+button {
+    border: none;
+    background: none;
+    color: #468492a4;
+    float: right;
 
-*/
+    &:active {
+        transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+    }
+}
+
+.delete-button:hover, .add-button:hover {
+    color: #468492e3;
+}
+.delete-button:active {
+    color: red;
+}
+.add-button:active {
+    color: rgb(255, 255, 255);
+}
+
+div.todo-wrapper {
+    box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px;
+    font-size: 28px;
+    background: #cff4fc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+    color: white;
+    margin-top: 4rem;
+}
+
+// List styles
+ul.list-group, li.list-group-item {
+    background: none;
+    border-radius: 0;
+}
+ul.list-group {
+    border: none;
+}
+li.list-group-item, form{
+    padding: 1rem 2rem 1rem 3rem;
+}
+ul.list-group, div.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+small.li-counter {
+    padding: 1.5rem;
+}
+
+// Form styles
+input.form-control, input.form-control:active, input.form-control:focus {
+    box-shadow: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}

@@ -13,6 +13,19 @@ body, input.form-control {
     font-family: "Dekko";
     font-size: 28px;
 }
+div.todo-wrapper {
+    font-size: 28px;
+    background: #cff4fc;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 14px 28px, rgb(0 0 0 / 15%) 0px 10px 10px, #cff4fc 0px 10px, rgb(0 0 0 / 10%) 0px 14px 28px, rgb(0 0 0 / 15%) 0px 10px 10px, #cff4fc 0px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+    color: white;
+    margin-top: 4rem;
+}
 
 // Buttons styles
 button {
@@ -39,38 +52,35 @@ button {
 .add-button:active {
     color: rgb(255, 255, 255);
 }
-
-div.todo-wrapper {
-    box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px;
-    font-size: 28px;
-    background: #cff4fc;
-    border-radius: 5px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 75px;
-    color: white;
-    margin-top: 4rem;
+.hide-button {
+    visibility: hidden;
 }
 
 // List styles
 ul.list-group, li.list-group-item {
     background: none;
     border-radius: 0;
+    color: #315c64;
 }
 ul.list-group {
     border: none;
 }
+li.list-group-item {
+    transition: 0.3s;
+}
 li.list-group-item, form{
     padding: 1rem 2rem 1rem 3rem;
+}
+li.li-highlighted {
+    color: #44818b;
+    background-color: #eefcff; 
 }
 ul.list-group, div.container-fluid {
     margin: 0;
     padding: 0;
 }
 small.li-counter {
-    padding: 1.5rem;
+    padding-left: 1rem;
 }
 
 // Form styles

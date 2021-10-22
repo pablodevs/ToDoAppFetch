@@ -3,10 +3,6 @@ import { TodoForm } from "./todoform.jsx";
 import { TodoList } from "./todolist.jsx";
 
 const Todo = props => {
-	// Hooks
-
-	// Functions
-
 	// Render
 	return (
 		<div className="container">

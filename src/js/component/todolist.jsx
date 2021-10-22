@@ -8,7 +8,7 @@ export const TodoList = props => {
 
 	// Functions
 	const addTodoLI = input => {
-		let newTodoLIs = [input, ...todoLIs];
+		let newTodoLIs = [...todoLIs, input];
 		setTodoLIs(newTodoLIs);
 	};
 
@@ -25,7 +25,7 @@ export const TodoList = props => {
 				<ToDos listOfToDos={todoLIs} removeFunction={removeTodoLI} />
 			</ul>
 			<small className="li-counter text-muted">
-				{todoLIs.length} items left
+				{todoLIs.length} tasks left
 			</small>
 		</div>
 	);

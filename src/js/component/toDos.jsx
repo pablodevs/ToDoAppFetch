@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import { PropTypes } from "prop-types";
 
 export const ToDos = props => {
-	// Hooks
-	const [mouseOver, setMouseOver] = useState("");
-
 	// Functions
 	const handleClick = key => {
 		props.removeFunction(key);
+	};
+
+	const handleMouseEnter = e => {
+		e.target.classList.add("li-highlighted");
+		e.target.lastChild.classList.remove("hide-button");
+	};
+
+	const handleMouseLeave = e => {
+		e.target.classList.remove("li-highlighted");
+		e.target.lastChild.classList.add("hide-button");
 	};
 
 	// Render
@@ -15,17 +22,13 @@ export const ToDos = props => {
 		return (
 			<li
 				key={idx}
-				className={
-					"list-group-item" + (mouseOver ? " li-highlighted" : "")
-				}
-				onMouseOver={() => setMouseOver(true)}
-				onMouseOut={() => setMouseOver(false)}>
+				className="list-group-item"
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}>
 				{toDo}
 				<button
 					onClick={() => handleClick(idx)}
-					className={
-						"delete-button" + (mouseOver ? "" : " hide-button")
-					}>
+					className="delete-button hide-button">
 					<i className="far fa-trash-alt"></i>
 				</button>
 			</li>

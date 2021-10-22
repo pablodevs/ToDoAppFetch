@@ -6,7 +6,9 @@ export const TodoForm = props => {
 	const [input, setInput] = useState("");
 
 	// Functions
-	const handleSubmit = () => {
+	const handleSubmit = e => {
+		e.preventDefault();
+
 		if (!input || /^\s*$/.test(input)) {
 			null;
 		} else props.createLI(input.replace(/\s\s+/g, " "));

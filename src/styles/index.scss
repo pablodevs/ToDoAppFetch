@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     font-size: 75px;
     color: white;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 // Buttons styles
@@ -42,14 +42,10 @@ button {
         -moz-transform: scale(0.9);
     }
 }
-
-.delete-button:hover, .add-button:hover {
-    color: #468492e3;
-}
-.delete-button:active {
+.delete-button:active, .delete-button:hover{
     color: red;
 }
-.add-button:active {
+.add-button:active, .add-button:hover {
     color: rgb(255, 255, 255);
 }
 .hide-button {
@@ -74,6 +70,13 @@ li.list-group-item, form{
 li.li-highlighted {
     color: #44818b;
     background-color: #eefcff; 
+    cursor: pointer;
+}
+li.todo-done {
+    opacity: 0.3;
+    background-color: #73878b;
+    color: white;
+    text-decoration: line-through;
 }
 ul.list-group, div.container-fluid {
     margin: 0;

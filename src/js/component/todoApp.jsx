@@ -1,7 +1,7 @@
 import React from "react";
 import { TodoList } from "./todolist.jsx";
 
-const Todo = () => {
+const TodoApp = () => {
 	// Render
 	return (
 		<div className="container">
@@ -13,4 +13,4 @@ const Todo = () => {
 	);
 };
 
-export default Todo;
+export default TodoApp;

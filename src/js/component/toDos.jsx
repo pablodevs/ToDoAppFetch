@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { PropTypes } from "prop-types";
 
 export const ToDos = props => {
 	// Functions
-	const handleClick = key => {
+	const handleDelete = key => {
 		props.removeFunction(key);
 	};
 
@@ -17,17 +17,24 @@ export const ToDos = props => {
 		e.target.lastChild.classList.add("hide-button");
 	};
 
+	const handleClick = e => {
+		e.target.classList.contains("todo-done")
+			? e.target.classList.remove("todo-done")
+			: e.target.classList.add("todo-done");
+	};
+
 	// Render
 	return props.listOfToDos.map((toDo, idx) => {
 		return (
 			<li
 				key={idx}
 				className="list-group-item"
+				onClick={handleClick}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}>
 				{toDo}
 				<button
-					onClick={() => handleClick(idx)}
+					onClick={() => handleDelete(idx)}
 					className="delete-button hide-button">
 					<i className="far fa-trash-alt"></i>
 				</button>

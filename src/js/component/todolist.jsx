@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TodoForm } from "./todoform.jsx";
 import { ToDos } from "./toDos.jsx";
 
-export const TodoList = props => {
+export const TodoList = () => {
 	// Hooks
 	const [todoLIs, setTodoLIs] = useState([]);
 

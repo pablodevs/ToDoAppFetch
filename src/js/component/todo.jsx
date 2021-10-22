@@ -1,8 +1,7 @@
 import React from "react";
-import { TodoForm } from "./todoform.jsx";
 import { TodoList } from "./todolist.jsx";
 
-const Todo = props => {
+const Todo = () => {
 	// Render
 	return (
 		<div className="container">

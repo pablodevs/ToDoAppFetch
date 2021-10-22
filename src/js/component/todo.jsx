@@ -5,7 +5,7 @@ const Todo = () => {
 	// Render
 	return (
 		<div className="container">
-			<h1>To-Do List</h1>
+			<h1>To Do List</h1>
 			<div className="todo-wrapper container-fluid p-0">
 				<TodoList />
 			</div>

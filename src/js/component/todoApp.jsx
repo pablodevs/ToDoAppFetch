@@ -6,7 +6,7 @@ const TodoApp = () => {
 	return (
 		<div className="container">
 			<h1>To Do List</h1>
-			<div className="todo-wrapper container-fluid p-0">
+			<div className="todo-wrapper container-fluid p-0 mb-5">
 				<TodoList />
 			</div>
 		</div>

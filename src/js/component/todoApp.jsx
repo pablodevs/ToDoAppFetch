@@ -9,6 +9,7 @@ const TodoApp = () => {
 			<div className="todo-wrapper container-fluid p-0 mb-5">
 				<TodoList />
 			</div>
+			<div id="alerts"></div>
 		</div>
 	);
 };

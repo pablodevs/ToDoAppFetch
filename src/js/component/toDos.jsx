@@ -2,7 +2,7 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 export const ToDos = props => {
-	// Functions
+	// Events Functions
 	const handleDelete = key => {
 		props.removeFunction(key);
 	};

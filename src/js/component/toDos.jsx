@@ -32,7 +32,7 @@ export const ToDos = props => {
 				onClick={handleClick}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}>
-				{toDo}
+				{toDo.label}
 				<button
 					onClick={() => handleDelete(idx)}
 					className="delete-button hide-button">
